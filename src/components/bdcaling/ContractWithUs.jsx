@@ -125,7 +125,7 @@ export default function ContractWithUs() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Let's Collaborate
+              Let&apos;s Collaborate
             </motion.button>
           </form>
         </motion.div>
