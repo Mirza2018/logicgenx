@@ -57,7 +57,7 @@ export default function ContractWithUs() {
               {steps.map((step, index) => (
                 <motion.div 
                   key={index}
-                  className={`flex items-start space-x-4 p-4 rounded-lg transition-colors ${activeStep === index ? 'bg-blue-800 bg-opacity-50' : ''}`}
+                  className={`flex items-start space-x-4 p-4 rounded-lg transition-colors ${activeStep === index ? 'bg-gray-600 bg-opacity-50' : ''}`}
                   whileHover={{ scale: 1.05 }}
                   onHoverStart={() => setActiveStep(index)}
                 >
@@ -105,19 +105,19 @@ export default function ContractWithUs() {
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-blue-200">Name</label>
-              <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md bg-blue-900 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md bg-gray-500 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-blue-200">Email</label>
-              <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md bg-blue-900 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md bg-gray-500  bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-blue-200">Company</label>
-              <input type="text" id="company" name="company" className="mt-1 block w-full rounded-md bg-blue-900 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <input type="text" id="company" name="company" className="mt-1 block w-full rounded-md bg-gray-500 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-blue-200">Message</label>
-              <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md bg-blue-900 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
+              <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md bg-gray-500  bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
             </div>
             <motion.button 
               type="submit" 

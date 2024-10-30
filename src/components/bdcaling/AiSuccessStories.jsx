@@ -113,7 +113,7 @@ export default function AiSuccessStories() {
           </div>
         </section>
 
-        <section id="contact" className="bg-black rounded-lg shadow-lg p-8">
+        {/* <section id="contact" className="bg-black rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-semibold text-white mb-6">Contact Us</h2>
           <p className="text-white mb-6">Interested in leveraging AI for your business? Get in touch with us today!</p>
           <form className="space-y-4">
@@ -131,7 +131,7 @@ export default function AiSuccessStories() {
             </div>
             <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">Send Message</button>
           </form>
-        </section>
+        </section> */}
       </main>
 
       {/* <footer className="bg-gray-800 text-white py-8">
@@ -157,10 +157,11 @@ export default function AiSuccessStories() {
       </footer> */}
 
       {selectedStory && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+       
+        <div className="fixed inset-0 bg-black bg-opacity-10 backdrop-blur-sm flex items-center justify-center p-4 z-50">
           <div className="bg-black rounded-lg max-w-2xl w-full p-6 relative">
             <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-white text-2xl font-bold text-red-600"
+              className="absolute top-2 right-2  hover:text-white text-2xl font-bold text-red-600"
               onClick={() => setSelectedStory(null)}
             >
               x
