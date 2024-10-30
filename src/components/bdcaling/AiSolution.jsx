@@ -9,7 +9,7 @@ const AiSolution = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center">
         <div className="relative w-[600px] h-[400px] lg:w-[500px] lg:h-[500px]">
           <Image
-            src='/img5.jpg'
+            src='/img3.jpg'
             alt="AI Brain"
             layout="fill"
             objectFit="contain"

@@ -1,106 +1,153 @@
 "use client"
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { AiFillCloseCircle, AiTwotoneShopping } from "react-icons/ai";
-import React, { useEffect, useState } from 'react';
-import MyCart from '../MyCart/MyCart';
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross1 } from "react-icons/rx";
+import { AnimatePresence, motion } from "framer-motion"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
+import { RxCross1 } from "react-icons/rx"
 
-const Navber = () => {
-  const pathName = usePathname();
-  const [items, setItems] = useState([]);
-  const [open, setOpen] = useState(false);
-  const [cart, setCart] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const menuRef = useRef(null)
+  const pathName = usePathname()
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
 
   useEffect(() => {
-    const buy = JSON.parse(localStorage.getItem("nextorderDetails"));
-    setItems(buy);
-  }, []);
+    const handleClickOutside = (event) => {
+      if (isOpen && menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false)
+      }
+    }
 
-  console.log(cart);
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isOpen])
 
   const menuItems = [
-    {
-      title: "Home",
-      path: "/"
+    { title: "Home", path: "/" },
+    { title: "Our Solutions", path: "/our-solutions" },
+    { title: "Success Stories", path: "/success-stories" },
+    { title: "Our Mission", path: "/our-mission" },
+    { title: "Connect With Us", path: "/connect-with-us" },
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
     },
-    {
-      title: "Our Solutions",
-      path: "/our-solutions"
-    },
-    {
-      title: "Success Stories",
-      path: "/success-stories"
-    },
-    {
-      title: "Our Mission",
-      path: "/our-mission"
-    },
-    {
-      title: "Connect With Us",
-      path: "/connect-with-us"
-    },
-  ];
+    exit: { opacity: 0 },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    exit: { opacity: 0, y: -10, transition: { duration: 0.2 } },
+  }
 
   return (
-    <div className='bg-white sticky top-0 z-50 text-black'>
-      <div className="container mx-auto flex flex-row justify-between items-center navbar">
+    <div className="bg-gradient-to-br from-slate-100 via-gray-200 to-slate-200 sticky top-0 z-50 text-black">
+      <div className="container mx-auto flex justify-between items-center p-4">
+        <div className="relative" ref={menuRef}>
+          <div
+            onClick={toggleMenu}
+            className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-black hover:text-gray-700 focus:outline-none focus:bg-gray-200 transition duration-150 ease-in-out cursor-pointer"
+            aria-label="Toggle menu"
+          >
+    <label className="flex flex-col gap-2 w-8 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+      {/* Top Line */}
+      <div
+        className={`rounded-2xl h-[3px] bg-black duration-300 transform ${
+          isOpen ? "rotate-45 translate-y-[10px]" : "w-full"
+        }`}
+      ></div>
+      
+      {/* Middle Line */}
+      <div
+        className={`rounded-2xl h-[3px] bg-black duration-300 transform ${
+          isOpen ? "opacity-0" : "opacity-100 w-full"
+        }`}
+      ></div>
+      
+      {/* Bottom Line */}
+      <div
+        className={`rounded-2xl h-[3px] bg-black duration-300 transform ${
+          isOpen ? "-rotate-45 -translate-y-[10px]" : "w-full"
+        }`}
+      ></div>
+    </label>
 
 
 
-        {/* Mobile menus */}
-        <div className="dropdown lg:hidden cursor-pointer">
-          <div tabIndex={0}>
-            {
-              open ?
-                <RxCross1 onClick={() => setOpen(!open)} className='text-2xl me-8 font-bold text-black' />
-                :
-                <GiHamburgerMenu onClick={() => setOpen(!open)} className='text-2xl me-8' />
-            }
-          </div>
-
-          {open ? (
-            <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1]  p-2 shadow me-56">
-              {menuItems.map(menu =>
-                <Link className={`${pathName === menu?.path && "text-sky-500"}`} href={menu.path} key={menu.title}>
-                  <li className='p-2 mx-3 text-base font-bold uppercase text-black hover-double-underline'>
-                    {menu.title}
-                  </li>
-                </Link>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="px-2 top-12 left-0 w-[200px] pt-2 pb-3 space-y-1 sm:px-3 absolute bg-white z-50 rounded-xl shadow-lg"
+                >
+                  {menuItems.map((item) => (
+                    <motion.div key={item.title} variants={itemVariants}>
+                      <Link
+                        href={item.path}
+                        className={`block px-3 py-2 rounded-md text-base font-medium ${
+                          pathName === item.path ? "text-sky-500" : "text-black"
+                        } hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
               )}
-            </ul>
-          ) : null}
+            </AnimatePresence>
+          </div>
         </div>
 
-
-        {/* Logo Section */}
-        <div className='w-32'>
-          <Link href='/'>
-            <Image placeholder='blur' blurDataURL='/logo.png'
-             priority src='/logo.png' height={300} width={300} alt='next-level-services' />
+        <div className="w-32">
+          <Link href="/">
+            <Image
+              priority
+              src="/logo.png"
+              height={300}
+              width={300}
+              alt="next-level-services"
+            />
           </Link>
         </div>
 
-
-        {/* Big Screen Menu */}
         <div className="hidden lg:flex ml-auto">
           <ul className="menu menu-horizontal px-1">
-            {menuItems.map(menu =>
-              <Link className={`${pathName === menu?.path && "text-sky-500"}`} href={menu.path} key={menu.title}>
-                <li className='p-2 mx-3 text-base text-black font-bold uppercase relative hover-double-underline'>
-  {menu.title}
-</li>
-
+            {menuItems.map((menu) => (
+              <Link
+                className={`${pathName === menu.path ? "text-sky-500" : ""}`}
+                href={menu.path}
+                key={menu.title}
+              >
+                <li className="p-2 mx-3 text-base text-black font-bold uppercase relative hover-double-underline">
+                  {menu.title}
+                </li>
               </Link>
-            )}
+            ))}
           </ul>
         </div>
+
+ 
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navber;
+export default Navbar
