@@ -70,7 +70,7 @@ const Navbar = () => {
           isOpen ? "rotate-45 translate-y-[10px]" : "w-full"
         }`}
       ></div>
-      
+       
       {/* Middle Line */}
       <div
         className={`rounded-2xl h-[3px] bg-black duration-300 transform ${
