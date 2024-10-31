@@ -2,6 +2,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaBrain, FaRocket, FaChartLine, FaHandshake, FaArrowRight } from 'react-icons/fa'
+import Image from 'next/image'
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 export default function ContractWithUs() {
   const [activeStep, setActiveStep] = useState(0)
@@ -21,6 +24,85 @@ export default function ContractWithUs() {
     "Competitive Advantage",
     "Scalability",
   ]
+
+
+  const onFormSubmit = (e) => {
+    
+    e.preventDefault()
+    const name=e.target.name.value;
+    const email=e.target.email.value;
+    const company=e.target.company.value;
+    const message=e.target.message.value;
+    console.log(name,email,company,message);
+    
+    
+    if(!name){
+      Swal.fire({
+        title: "Name Field is Require!",
+        icon: "error"
+      });
+      return 
+      
+      
+    }
+    else if(!email){
+      Swal.fire({
+        title: "Email Field is Require!",
+        icon: "error"
+      });
+      return 
+
+      
+    }
+    else if (!(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))) {
+      Swal.fire({
+        title: "Give a Valid Email!",
+        icon: "error"
+      });
+      return 
+  }
+    else if(!company){
+      Swal.fire({
+        title: "Company is Require!",
+        icon: "error"
+      });
+      return 
+    }
+    else if(!message){
+      Swal.fire({
+        title: "Please Tell Us About Your business",
+        icon: "error"
+      });
+      return 
+    }
+  
+
+
+
+    const template={
+      to_name:"CEO  ",
+      from_name:"Mirza",
+      message:   `Name: ${name},
+                  Email: ${email},
+                  Company: ${company}, 
+                  Message: ${message}`,
+    }
+  
+    emailjs
+    .send(process.env.NEXT_PUBLIC_SERVICE, process.env.NEXT_PUBLIC_TEMPLATE, template, {
+      publicKey: process.env.NEXT_PUBLIC_KEY,
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+
+
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-800 via-gray-800 to-indigo-900 text-white">
@@ -95,14 +177,30 @@ export default function ContractWithUs() {
           </motion.div>
         </div>
 
+
+
+        <h2 className="text-2xl font-semibold mb-6 text-center">Ready to Get Started?</h2>
+
+<div className='grid md:grid-cols-2 gap-5'>
+  <div className=' flex justify-center items-center'>
+    <Image alt='contract'
+     width={1000}
+      height={1000} 
+      className='w-full  rounded-xl object-cover '
+      src={`/3.png`}/>
+  </div>
+
         <motion.div 
-          className="max-w-2xl mx-auto bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8"
+          className=" bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h2 className="text-2xl font-semibold mb-6 text-center">Ready to Get Started?</h2>
-          <form className="space-y-4">
+         
+
+
+
+          <form className="space-y-4" onSubmit={onFormSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-blue-200">Name</label>
               <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md bg-gray-500 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
@@ -129,6 +227,12 @@ export default function ContractWithUs() {
             </motion.button>
           </form>
         </motion.div>
+</div>
+
+
+
+
+
       </main>
     </div>
   )
