@@ -95,6 +95,13 @@ export default function ContractWithUs() {
     .then(
       () => {
         console.log('SUCCESS!');
+        Swal.fire({
+          title: "Application Done",
+          text: "We will contact you soon!",
+          icon: "success"
+        });
+        e.target.reset()
+
       },
       (error) => {
         console.log('FAILED...', error.text);
