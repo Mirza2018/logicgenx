@@ -89,8 +89,8 @@ export default function ContractWithUs() {
     }
   
     emailjs
-    .send(process.env.NEXT_PUBLIC_PUBLIC_API, process.env.NEXT_PUBLIC_TEMPLATE, template, {
-      publicKey: process.env.NEXT_PUBLIC_KEY,
+    .send(process.env.NEXT_PUBLIC_SERVICE, process.env.NEXT_PUBLIC_TEMPLATE, template, {
+      publicKey: process.env.NEXT_PUBLIC_PUBLIC_API,
     })
     .then(
       () => {
