@@ -55,7 +55,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-slate-100 via-gray-200 to-slate-200 sticky top-0 z-50 text-black">
+    // <div className="bg-gradient-to-br from-slate-100 via-gray-200 to-slate-200 sticky top-0 z-50 text-black">
+    <div className="bg-white sticky top-0 z-50 text-black">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="relative" ref={menuRef}>
           <div
@@ -102,8 +103,7 @@ const Navbar = () => {
                       <Link
                         href={item.path}
                         className={`block px-3 py-2 rounded-md text-base font-medium ${
-                          pathName === item.path ? "text-sky-500" : "text-black"
-                        } hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out`}
+                          pathName === item.path ? "text-[#3363ff]" : "text-black"} hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out`}
                         onClick={() => setIsOpen(false)}
                       >
                         {item.title}
@@ -116,13 +116,13 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="w-32">
+        <div className="md:w-36 w-28">
           <Link href="/">
             <Image
               priority
               src="/logo.png"
-              height={300}
-              width={300}
+              height={1000}
+              width={1000}
               alt="next-level-services"
             />
           </Link>
@@ -136,7 +136,7 @@ const Navbar = () => {
                 href={menu.path}
                 key={menu.title}
               >
-                <li className="p-2 mx-3 text-base text-black font-bold uppercase relative hover-double-underline">
+                <li className="p-2 mx-3 text-base  font-bold uppercase relative hover-double-underline">
                   {menu.title}
                 </li>
               </Link>

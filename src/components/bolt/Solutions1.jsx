@@ -178,7 +178,7 @@ export default function Solutions1() {
   
 
       {/* CTA Section */}
-      <section className="py-20 bg-indigo-900 text-white">
+      <section className="py-20 bg-[#0F1C45] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Business?
@@ -186,15 +186,20 @@ export default function Solutions1() {
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
             Let's discuss how our solutions can help you achieve your business goals and drive innovation.
           </p>
-          <Link
-            href="/connect-with-us"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-indigo-900 transition-colors"
-          >
-            Schedule a Consultation
-          </Link>
+      
+
+          <Link href="/connect-with-us" >
+          <div className="grid gap-8 items-start justify-center mt-6">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+                <span className=" text-indigo-400 group-hover:text-gray-100 transition duration-200">Schedule a Consultation&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </Link>
+
+
         </div>
       </section>
     </div>

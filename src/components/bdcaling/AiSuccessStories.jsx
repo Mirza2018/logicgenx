@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { FaRobot, FaBrain, FaChartLine, FaQuoteLeft, FaLinkedin, FaTwitter, FaGithub, FaEnvelope, FaArrowRight } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-
+ 
 export default function AiSuccessStories() {
   const [selectedStory, setSelectedStory] = useState(null)
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Award, Brain, ChevronRight, Cloud, Database, Target, Users, Workflow, Zap } from 'lucide-react';
 import Image from 'next/image';
-import bg from '/public/bg1.jpg'
+import bg from '/public/homebanner.png'
 import bg2 from '/public/contract.png'
 
 const Homex2 = () => {
@@ -9,13 +9,14 @@ const Homex2 = () => {
     return (
         <div className="w-full bg-gray-500 " >
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center  text-white ">
-        <Image src={bg} alt="Mixer" className='absolute top-0 left-0 w-full h-full object-cover aspect-square opacity-50 z-10'/>
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-800 opacity-80"></div>
+        <section className="relative h-screen flex items-center justify-center  text-white "  >
+        <Image src={bg} alt="Mixer" className='absolute top-0 left-0 w-full h-screen 
+        object-bottom  aspect-square opacity-40 z-10'/>
+          <div className="absolute inset-0 bg-black opacity-[100%]"></div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1
-              className="text-4xl md:text-6xl font-bold mb-6"
+              className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white"
             >
               Unlock Business Potential with Intelligent Tech Solutions
             </h1>
@@ -30,7 +31,7 @@ const Homex2 = () => {
 
             >
               <Link
-                href="/solutions"
+                href="/our-solutions"
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-lg"
               >
                 Discover Our Solutions
@@ -71,7 +72,7 @@ const Homex2 = () => {
                   <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
                   <Link
-                    href={solution.link}
+                    href={"/our-solutions"}
                     className="inline-flex items-center text-indigo-600 hover:text-indigo-700"
                   >
                     Learn more
@@ -84,9 +85,9 @@ const Homex2 = () => {
         </section>
   
         {/* Why Choose Us Section */}
-        <section className="py-20 " >
+        <section className="py-20 bg-[#0F1C45]" >
         {/* <Image src={bg} alt="Mixer" className='absolute top-0 left-0 w-full h-full object-cover aspect-square opacity-50 z-10'/> */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose LogicGenX
@@ -109,7 +110,7 @@ const Homex2 = () => {
                     {/* <item.icon className="h-8 w-8" /> */}
                     {item?.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-xl text-white/85 font-semibold mb-2">{item.title}</h3>
                   <p className="text-white">{item.description}</p>
                 </div>
               ))}
@@ -118,7 +119,7 @@ const Homex2 = () => {
         </section>
   
         {/* Testimonials Section */}
-        <section className="py-20 ">
+        <section className="py-20  bg-[#0F1C45]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -151,19 +152,29 @@ const Homex2 = () => {
             </div>
   
             <div className="text-center mt-12">
-              <Link
-                href="/success-stories"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-              >
-                Read More Success Stories
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
+
+
+           
+
+        <Link href="/success-stories" >
+          <div className="grid gap-8 items-start justify-center mt-6">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+                <span className=" text-indigo-400 group-hover:text-gray-100 transition duration-200">Read More Success Stories&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </Link>
+
+
+
             </div>
           </div>
         </section>
   
         {/* CTA Section */}
-        <section className="py-20 bg-indigo-900 text-white">
+        <section className="py-20 bg-[#0F1C45] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Elevate Your Business?
@@ -172,13 +183,22 @@ const Homex2 = () => {
               Get in touch with our team to discuss how LogicGenX's solutions can
               empower your organization
             </p>
-            <Link
-              href="/connect-with-us"
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-indigo-900 transition-colors"
-            >
-              Book a Consultation
-              <ChevronRight className="ml-2 h-5 w-5" />
-            </Link>
+            
+
+            <Link href="/connect-with-us" >
+          <div className="grid gap-8 items-start justify-center mt-6">
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
+                <span className=" text-indigo-400 group-hover:text-gray-100 transition duration-200">Book a Consultation&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </Link>
+
+
+
+
           </div>
         </section>
       </div>

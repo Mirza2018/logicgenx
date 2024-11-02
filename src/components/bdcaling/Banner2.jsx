@@ -1,7 +1,7 @@
 const Banner2 = () => {
     return (
         <div className="bg-gradient-to-b from-[#101212] relative to-[#08201D]"
-        style={{ backgroundImage: "url('/bg1.jpg')" }}
+        style={{ backgroundImage: "url('/homebanner.png')" }}
         >
         <div className="absolute bg-black inset-0 opacity-70"></div> 
 

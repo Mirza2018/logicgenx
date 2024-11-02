@@ -112,12 +112,12 @@ export default function ContractWithUs() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-800 via-gray-800 to-indigo-900 text-white">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwMDAwMTAiPjwvcmVjdD4KPHBhdGggZD0iTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVoiIHN0cm9rZT0iIzIwMjAyMDIwIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] opacity-10"></div>
+    <div className="min-h-screen bg-[#0F1C45] text-white">
+      
 
       <main className="container mx-auto px-4 py-12 relative z-10">
         <motion.h1 
-          className="text-4xl md:text-5xl font-bold text-center mb-8"
+          className="text-4xl md:text-5xl font-bold text-center mb-8 text-white"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -125,8 +125,8 @@ export default function ContractWithUs() {
           Contract with Us
         </motion.h1>
 
-        <motion.p 
-          className="text-xl text-center text-blue-200 mb-12 max-w-2xl mx-auto"
+        {/* <motion.p 
+          className="text-xl text-center text-white mb-12 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -186,7 +186,7 @@ export default function ContractWithUs() {
 
 
 
-        <h2 className="text-2xl font-semibold mb-6 text-center">Ready to Get Started?</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Ready to Get Started?</h2> */}
 
 <div id='#book-a-consultation' className='grid md:grid-cols-2 gap-5'>
   <div className=' flex justify-center items-center'>
@@ -198,7 +198,7 @@ export default function ContractWithUs() {
   </div>
 
         <motion.div 
-          className=" bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8"
+          className=" bg-slate-600 shadow-xl rounded-lg p-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -209,20 +209,20 @@ export default function ContractWithUs() {
 
           <form className="space-y-4" onSubmit={onFormSubmit}>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-blue-200">Name</label>
-              <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md bg-gray-500 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <label htmlFor="name" className="block text-sm font-medium text-white">Name</label>
+              <input type="text" id="name" name="name" placeholder='Input your Name' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-blue-200">Email</label>
-              <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md bg-gray-500  bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <label htmlFor="email" className="block text-sm font-medium text-white">Email</label>
+              <input type="email" id="email" name="email" placeholder='Input your Mail' className=" px-2 mt-1 block w-full rounded-md bg-white py-2 border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
             </div>
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-blue-200">Company</label>
-              <input type="text" id="company" name="company" className="mt-1 block w-full rounded-md bg-gray-500 bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <label htmlFor="company" className="block text-sm font-medium text-white">Company</label>
+              <input type="text" id="company" placeholder='Input your company Name'  name="company" className="px-2 mt-1 block w-full rounded-md bg-white py-2 border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-blue-200">Message</label>
-              <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md bg-gray-500  bg-opacity-50 border-blue-700 text-blue-100 placeholder-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
+              <textarea id="message" placeholder='Input Message'  name="message" rows={4} className="px-2 mt-1 block w-full rounded-md bg-white border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
             </div>
             <motion.button 
               type="submit" 
