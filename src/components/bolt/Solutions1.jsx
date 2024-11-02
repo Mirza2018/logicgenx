@@ -1,6 +1,9 @@
 import React from 'react';
 import { Brain, Cloud, Database, Workflow, Search, FileText, Bot, Cpu, Server, Shield, Code, Cog } from 'lucide-react';
 import SolutionSection from './Solutions/SolutionSection';
+import bg from '/public/bg1.jpg'
+import Image from 'next/image';
+import Link from 'next/link';
 
 
 const aiSolutions = [
@@ -133,7 +136,9 @@ export default function Solutions1() {
   return (
     <div className="w-full bg-gray-500">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-800 text-white">
+
+      <section className="relative py-20 bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-800 text-white h-1/2">
+      {/* <Image src={bg} alt="ai" className='absolute top-0 left-0 w-full h-full object-cover aspect-square opacity-50 z-10 '/> */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1
@@ -154,8 +159,8 @@ export default function Solutions1() {
           </p>
         </div>
       </section>
-
-      <SolutionSection
+      <div className="relative bg-bottom bg-fixed bg-contain"  style={{ backgroundImage: "url('/AiSolutionImg.png')" }}>
+            <SolutionSection
         id="ai"
         title="AI-Driven Innovations"
         description="Harness the power of artificial intelligence to transform your business operations and drive innovation."
@@ -168,6 +173,9 @@ export default function Solutions1() {
         description="Build secure, scalable, and efficient cloud environments tailored to your business needs."
         solutions={cloudSolutions}
       />
+      </div>
+
+  
 
       {/* CTA Section */}
       <section className="py-20 bg-indigo-900 text-white">
@@ -178,15 +186,15 @@ export default function Solutions1() {
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
             Let's discuss how our solutions can help you achieve your business goals and drive innovation.
           </p>
-          <a
-            href="/contact"
+          <Link
+            href="/connect-with-us"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-indigo-900 transition-colors"
           >
             Schedule a Consultation
-          </a>
+          </Link>
         </div>
       </section>
     </div>

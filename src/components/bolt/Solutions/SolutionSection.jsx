@@ -3,9 +3,11 @@ import SolutionCard from './SolutionCard';
 
 
 
+
 export default function SolutionSection({ id, title, description, solutions }) {
   return (
-    <section id={id} className="py-20 bg-gray-500">
+    <section id={id} className="py-20 bg-black bg-opacity-60" >
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           initial={{ opacity: 0, y: 20 }}
