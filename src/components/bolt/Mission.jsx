@@ -71,7 +71,7 @@ export default function Mission() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-8">What is LogicGenX's Mission?</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">What is LogicGenX&#39;s Mission?</h2>
             <p className="text-xl text-white/85 leading-relaxed">
               At LogicGenX, our mission is to empower businesses with cutting-edge technology solutions that drive growth, 
               improve efficiency, and enable transformative change. We are committed to pioneering advancements in artificial 

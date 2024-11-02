@@ -55,7 +55,7 @@ export default function StoryCard({
           <div className="relative">
             <Quote className="absolute top-0 left-0 h-8 w-8 text-indigo-100 transform -translate-x-4 -translate-y-4" />
             <blockquote className="text-gray-600 italic relative z-10">
-              "{testimonial.quote}"
+            &#34;{testimonial.quote}&#34;
             </blockquote>
             <div className="mt-4">
               <p className="font-semibold text-gray-900">{testimonial.author}</p>

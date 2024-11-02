@@ -96,7 +96,7 @@ export default function SuccessStories() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-200 max-w-3xl mx-auto"
           >
-            Discover how we've helped businesses across industries achieve their digital transformation goals
+            Discover how we&#39;ve helped businesses across industries achieve their digital transformation goals
           </motion.p>
         </div>
       </section>

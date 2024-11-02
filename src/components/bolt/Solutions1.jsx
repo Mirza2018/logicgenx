@@ -1,9 +1,6 @@
-import React from 'react';
-import { Brain, Cloud, Database, Workflow, Search, FileText, Bot, Cpu, Server, Shield, Code, Cog } from 'lucide-react';
-import SolutionSection from './Solutions/SolutionSection';
-import bg from '/public/bg1.jpg'
-import Image from 'next/image';
+import { Bot, Brain, Code, Cog, Database, FileText, Server, Shield } from 'lucide-react';
 import Link from 'next/link';
+import SolutionSection from './Solutions/SolutionSection';
 
 
 const aiSolutions = [
@@ -184,7 +181,7 @@ export default function Solutions1() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our solutions can help you achieve your business goals and drive innovation.
+            Let&#39;s discuss how our solutions can help you achieve your business goals and drive innovation.
           </p>
       
 

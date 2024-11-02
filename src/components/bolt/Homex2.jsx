@@ -126,7 +126,7 @@ const Homex2 = () => {
                 Success Stories
               </h2>
               <p className="text-xl text-white">
-                See how we've helped businesses achieve their goals
+                See how we&#39;ve helped businesses achieve their goals
               </p>
             </div>
   
@@ -139,7 +139,7 @@ const Homex2 = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-lg shadow-lg p-8"
                 >
-                  <div className="text-gray-600 mb-6">"{testimonial.quote}"</div>
+                  <div className="text-gray-600 mb-6">&#34;{testimonial.quote}&#34;</div>
                   <div>
                     <div className="font-semibold text-gray-900">
                       {testimonial.author}
@@ -180,7 +180,7 @@ const Homex2 = () => {
               Ready to Elevate Your Business?
             </h2>
             <p className="text-xl text-indigo-200 mb-8">
-              Get in touch with our team to discuss how LogicGenX's solutions can
+              Get in touch with our team to discuss how LogicGenX&#39;s solutions can
               empower your organization
             </p>
             
