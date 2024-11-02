@@ -188,7 +188,7 @@ export default function ContractWithUs() {
 
         <h2 className="text-2xl font-semibold mb-6 text-center">Ready to Get Started?</h2>
 
-<div className='grid md:grid-cols-2 gap-5'>
+<div id='#book-a-consultation' className='grid md:grid-cols-2 gap-5'>
   <div className=' flex justify-center items-center'>
     <Image alt='contract'
      width={1000}

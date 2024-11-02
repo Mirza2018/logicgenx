@@ -30,7 +30,7 @@ const AiSolution = () => {
         <Link href="/ai-solutions">
           <p className="inline-block text-sky-500 font-semibold uppercase tracking-wide hover:underline">
             Learn More
-            <div className="border-b-2 border-sky-500 w-16 mt-2"></div>
+            {/* <div className="border-b-2 border-sky-500 w-16 mt-2"></div> */}
           </p>
         </Link>
       </div>
