@@ -33,7 +33,7 @@ export default function ContractWithUs() {
     const email=e.target.email.value;
     const company=e.target.company.value;
     const message=e.target.message.value;
-    console.log(name,email,company,message);
+    // console.log(name,email,company,message);
     
     
     if(!name){
@@ -90,7 +90,7 @@ export default function ContractWithUs() {
   
     emailjs
     .send(process.env.NEXT_PUBLIC_SERVICE, process.env.NEXT_PUBLIC_TEMPLATE, template, {
-      publicKey: process.env.NEXT_PUBLIC_PUBLIC_API,
+      publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
     })
     .then(
       () => {
