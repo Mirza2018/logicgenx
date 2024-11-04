@@ -5,6 +5,7 @@ import { FaBrain, FaRocket, FaChartLine, FaHandshake, FaArrowRight } from 'react
 import Image from 'next/image'
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
+import GoogleMap from './GoogleMap'
 
 export default function ContractWithUs() {
   const [activeStep, setActiveStep] = useState(0)
@@ -125,69 +126,7 @@ export default function ContractWithUs() {
           Contract with Us
         </motion.h1>
 
-        {/* <motion.p 
-          className="text-xl text-center text-white mb-12 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Partner with us to harness the power of AI and transform your business. Our expert team will guide you through every step of the journey.
-        </motion.p>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <motion.div 
-            className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <h2 className="text-2xl font-semibold mb-6">Our Process</h2>
-            <div className="space-y-6">
-              {steps.map((step, index) => (
-                <motion.div 
-                  key={index}
-                  className={`flex items-start space-x-4 p-4 rounded-lg transition-colors ${activeStep === index ? 'bg-gray-600 bg-opacity-50' : ''}`}
-                  whileHover={{ scale: 1.05 }}
-                  onHoverStart={() => setActiveStep(index)}
-                >
-                  <div className="text-3xl text-blue-400">{step.icon}</div>
-                  <div>
-                    <h3 className="font-semibold text-lg">{step.title}</h3>
-                    <p className="text-blue-200">{step.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div 
-            className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <h2 className="text-2xl font-semibold mb-6">Benefits of AI Integration</h2>
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <motion.li 
-                  key={index}
-                  className="flex items-center space-x-2"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
-                >
-                  <FaArrowRight className="text-blue-400" />
-                  <span>{benefit}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-
-
-
-        <h2 className="text-2xl font-semibold mb-6 text-center">Ready to Get Started?</h2> */}
-
+        
 <div id='#book-a-consultation' className='grid md:grid-cols-2 gap-5'>
   <div className=' flex justify-center items-center'>
     <Image alt='contract'
@@ -241,6 +180,7 @@ export default function ContractWithUs() {
 
 
       </main>
+      <GoogleMap/>
     </div>
   )
 }

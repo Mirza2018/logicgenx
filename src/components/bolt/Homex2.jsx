@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Award, Brain, ChevronRight, Cloud, Database, Target, Users, Workflow, Zap } from 'lucide-react';
+import { Award, BetweenHorizontalStart, Brain, Cable, ChevronRight, Cloud, Database, MonitorCheck, Target, Users, Workflow, Zap } from 'lucide-react';
 import Image from 'next/image';
 import bg from '/public/homebanner.png'
 import bg2 from '/public/contract.png'
@@ -51,9 +51,8 @@ const Homex2 = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Intelligent Solutions
               </h2>
-              <p className="text-xl text-white">
-                Comprehensive tech-driven solutions designed to optimize and
-                elevate your business
+              <p className="text-lg md:text-xl text-white">
+              Explore our comprehensive range of tech-driven solutions, from AI innovations to cloud infrastructure and advanced data analytics, designed to optimize and elevate your business operations.
               </p>
             </div>
   
@@ -62,7 +61,7 @@ const Homex2 = () => {
                 <div
                   key={solution.title}
                   
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow"
                 >
                   <div className="text-indigo-600 mb-4">
                     {/* <solution.icon className="h-12 w-12" /> */}
@@ -71,13 +70,13 @@ const Homex2 = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <Link
+                  {/* <Link
                     href={"/our-solutions"}
                     className="inline-flex items-center text-indigo-600 hover:text-indigo-700"
                   >
                     Learn more
                     <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
+                  </Link> */}
                 </div>
               ))}
             </div>
@@ -230,10 +229,31 @@ const solutions = [
       link: '/solutions#data',
     },
     {
+      title: 'Intranet Excellence',
+      description:
+        'Optimize internal collaboration with custom-built intranets tailored to your organization’s needs.',
+      icon: <BetweenHorizontalStart className="h-12 w-12" />,
+      link: '/solutions#data',
+    },
+    {
+      title: 'Power Platform Mastery',
+      description:
+        'Create custom apps, automate workflows, and gain insights using low-code tools.',
+      icon: <Cable className="h-12 w-12" />,
+      link: '/solutions#data',
+    },
+    {
       title: 'Workflow Automation',
       description:
         'Streamline processes and reduce manual tasks with intelligent workflow automation solutions.',
       icon: <Workflow className="h-12 w-12" />,
+      link: '/solutions#automation',
+    },
+    {
+      title: 'RPA Desktop Flows',
+      description:
+        'Automate repetitive tasks for improved efficiency and accuracy, freeing up valuable resources.',
+      icon: <MonitorCheck className="h-12 w-12" />,
       link: '/solutions#automation',
     },
   ];
