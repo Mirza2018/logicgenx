@@ -325,14 +325,14 @@ export default function Solutions1() {
 
 
       <SolutionSection
-        id="Excellence"
+        id="excellence"
         title="Intranet Excellence"
         description="Enhance collaboration with a customized intranet that provides secure, centralized access to resources."
         solutions={excellence}
       />
 
       <SolutionSection
-        id="Power"
+        id="power"
         title="Power Platform Mastery"
         description="Empower your team with low-code tools for automation and insights."
         solutions={power}
@@ -365,7 +365,7 @@ export default function Solutions1() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
-            Let&#39;s discuss how our solutions can help you achieve your business goals and drive innovation.
+          Get in touch with our team to discuss how LogicGenX&#39;s solutions can empower your organization.
           </p>
       
 
@@ -374,7 +374,7 @@ export default function Solutions1() {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
               <button className="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600">
-                <span className=" text-indigo-400 group-hover:text-gray-100 transition duration-200">Schedule a Consultation&rarr;</span>
+                <span className=" text-indigo-400 group-hover:text-gray-100 transition duration-200">Book a Consultation&rarr;</span>
               </button>
             </div>
           </div>

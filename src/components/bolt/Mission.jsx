@@ -114,7 +114,7 @@ export default function Mission() {
 
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-black mb-6">Digital Transformation Approach</h3>
+              <h3 className="text-2xl font-bold text-black mb-6">How Do We Drive Digital Transformation for Businesses?</h3>
               <p className="text-lg text-black mb-6">
                 We are passionate about helping businesses adapt to the demands of the digital age. By integrating 
                 AI, cloud computing, and data analytics into our solutions, we enable our clients to become more 

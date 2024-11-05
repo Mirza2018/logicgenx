@@ -1,7 +1,8 @@
 "use client"
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import { Brain, Mail, MapPin, Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footerx() {
   return (
@@ -22,22 +23,22 @@ export default function Footerx() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-white">
+                <Link href="/" className="text-gray-400 hover:text-white">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/solutions" className="text-gray-400 hover:text-white">
+                <Link href="/our-solutions" className="text-gray-400 hover:text-white">
                   Our Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/success-stories" className="text-gray-400 hover:text-white">
+                <Link href="/success-stories" className="text-gray-400 hover:text-white">
                   Success Stories
                 </Link>
               </li>
               <li>
-                <Link to="/mission" className="text-gray-400 hover:text-white">
+                <Link href="/our-mission" className="text-gray-400 hover:text-white">
                   Our Mission
                 </Link>
               </li>
@@ -48,23 +49,23 @@ export default function Footerx() {
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/solutions#ai" className="text-gray-400 hover:text-white">
+                <Link href="/our-solutions#ai" className="text-gray-400 hover:text-white">
                   AI-Driven Innovations
                 </Link>
               </li>
               <li>
-                <Link to="/solutions#cloud" className="text-gray-400 hover:text-white">
+                <Link href="/our-solutions#cloud" className="text-gray-400 hover:text-white">
                   Cloud Infrastructure
                 </Link>
               </li>
               <li>
-                <Link to="/solutions#data" className="text-gray-400 hover:text-white">
-                  Data Analytics
+                <Link href="/our-solutions#excellence" className="text-gray-400 hover:text-white">
+                Intranet Excellence
                 </Link>
               </li>
               <li>
-                <Link to="/solutions#automation" className="text-gray-400 hover:text-white">
-                  Workflow Automation
+                <Link href="/our-solutions#power" className="text-gray-400 hover:text-white">
+                Power Platform Mastery
                 </Link>
               </li>
             </ul>
@@ -75,15 +76,16 @@ export default function Footerx() {
             <ul className="space-y-2">
               <li className="flex items-center text-gray-400">
                 <Phone className="h-5 w-5 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 636-290-2365</span>
               </li>
               <li className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-2" />
                 <span>contact@logicgenx.com</span>
               </li>
               <li className="flex items-center text-gray-400">
-                <MapPin className="h-5 w-5 mr-2" />
-                <span>123 Tech Plaza, Innovation City</span>
+                <MapPin className=" mr-2 h-9 w-9 " />
+                <span>
+                500 N Central Expy, Ste 500 #290, Plano, TX 75074, USA</span>
               </li>
             </ul>
           </div>

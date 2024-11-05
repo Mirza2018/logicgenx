@@ -19,7 +19,9 @@ export default function SolutionSection({ id, title, description, solutions }) {
           <p className="text-xl text-white/85 max-w-3xl mx-auto">{description}</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className={`grid gap-8 items-start ${
+        solutions.length === 1 ? 'grid-cols-1 justify-items-center' : 'grid-cols-1 lg:grid-cols-2'
+      }`}>
           {solutions.map((solution, index) => (
             <SolutionCard
               key={solution.title}
