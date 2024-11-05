@@ -160,27 +160,29 @@ const Homex2 = () => {
               Why Choose LogicGenX
             </h2>
             <p className="text-xl text-white">
-              Partner with us for innovative solutions and exceptional results
+              Embracing the Future of Technology
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9">
             {differentiators.map((item, index) => (
               <div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center h-72"
               >
                 <div className="inline-block p-4 bg-indigo-100 rounded-full text-indigo-600 mb-4">
                   {/* <item.icon className="h-8 w-8" /> */}
                   {item?.icon}
                 </div>
-                <h3 className="text-xl text-white/85 font-semibold mb-2">
+                <h3 className="text-xl text-white/85 font-semibold ">
                   {item.title}
                 </h3>
-                <p className="text-white">{item.description}</p>
+                <p className="text-white h-14">{item.description}</p>
+                <p className="text-white text-[14px] text-justify mt-2 ">{item?.details}</p>
+
               </div>
             ))}
           </div>
@@ -240,7 +242,7 @@ const Homex2 = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#0F1C45] text-white">
+      {/* <section className="py-20 bg-[#0F1C45] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Elevate Your Business?
@@ -263,7 +265,7 @@ const Homex2 = () => {
             </div>
           </Link>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
@@ -326,26 +328,30 @@ const differentiators = [
   {
     title: "Innovation",
     description:
-      "Embracing cutting-edge technology to keep your business at the forefront.",
+      "Embracing the Future of Technology.",
     icon: <Zap className="h-8 w-8" />,
+    details:"Our commitment to cutting-edge technology enables us to deliver AI-driven solutions and cloud innovations that keep your business at the forefront of industry trends. We harness the latest advancements to drive efficiency, agility, and growth in every project"
   },
   {
     title: "Expertise",
     description:
-      "Years of combined technical knowledge across AI, cloud, and analytics.",
+      "Years of Combined Technical Knowledge.",
     icon: <Award className="h-8 w-8" />,
+     details:"Our team of certified professionals brings a wealth of experience across AI, cloud computing, and data analytics. We ensure each solution is implemented with precision, giving you confidence in robust, reliable results that add value to your operations."
   },
   {
     title: "Tailored Solutions",
     description:
-      "Custom strategies aligned with your unique objectives and challenges.",
+      "Customized for Your Unique Needs.",
     icon: <Target className="h-8 w-8" />,
+     details:"No two businesses are alike, and neither are our solutions. We work closely with you to understand your specific challenges and goals, crafting bespoke strategies that align with your objectives, scale seamlessly, and enhance your competitive edge"
   },
   {
     title: "Client-Centric",
     description:
-      "Building lasting partnerships with dedicated support and guidance.",
+      "Partnering for Your Success.",
     icon: <Users className="h-8 w-8" />,
+     details:"At LogicGenX, we believe in building long-term partnerships. Your success is our priority, and we provide dedicated support, transparent communication, and ongoing guidance to help you achieve and exceed your goals with confidence."
   },
 ];
 
