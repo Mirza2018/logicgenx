@@ -43,7 +43,7 @@ const GoogleMap = () => {
                                 <div className="border-t border-gray-200 px-6 py-4">
                                     <h3 className="text-lg font-medium text-white">Contact</h3>
                                     <p className="mt-1 text-white">Email: info@logicgenx.com</p>
-                                    <p className="mt-1 text-white">Phone: +16362902365</p>
+                                    <p className="mt-1 text-white">Phone:+1 636-290-2365</p>
                                 </div>
                             </div>
                         </div>
