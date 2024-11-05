@@ -114,10 +114,15 @@ const Homex2 = () => {
               className="mySwiper "
             >
               {solutions.map((solution, index) => (
+
                 <SwiperSlide
                   key={index}
                   className="py-16"
                 >
+    link: "/our-solutions#excellence",
+                  <Link href={solution?.link}>
+
+                  
                   <div className="bg-white rounded-lg shadow-lg h-72 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
                   <div className="text-indigo-600 mb-4 ">
                     {/* <solution.icon className="h-12 w-12" /> */}
@@ -135,6 +140,7 @@ const Homex2 = () => {
                     <ChevronRight className="ml-1 h-4 w-4" />
                   </Link> */}
                   </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -278,49 +284,48 @@ const solutions = [
     description:
       "Harness AI to transform data into actionable insights, automate tasks, and drive predictive analytics.",
     icon: <Brain className="h-12 w-12" />,
-    link: "/solutions#ai",
+    link: "/our-solutions#ai",
   },
   {
     title: "Cloud Infrastructure",
     description:
       "Build secure, scalable cloud infrastructure to support your business's digital transformation.",
     icon: <Cloud className="h-12 w-12" />,
-    link: "/solutions#cloud",
+    link: "/our-solutions#cloud",
   },
   {
     title: "Data Analytics",
     description:
       "Empower data-driven decisions with business intelligence, advanced analytics, and data visualization.",
     icon: <Database className="h-12 w-12" />,
-    link: "/solutions#data",
+    link: "/our-solutions#data",
   },
   {
     title: "Intranet Excellence",
     description:
-      "Optimize internal collaboration with custom-built intranets tailored to your organization’s needs.",
+      "Optimize internal collaboration with custom-built intranets tailored to your organizations needs.",
     icon: <BetweenHorizontalStart className="h-12 w-12" />,
-    link: "/solutions#data",
+    link: "/our-solutions#excellence",
   },
   {
     title: "Power Platform Mastery",
     description:
       "Create custom apps, automate workflows, and gain insights using low-code tools.",
     icon: <Cable className="h-12 w-12" />,
-    link: "/solutions#data",
+    link: "/our-solutions#power",
   },
   {
     title: "Workflow Automation",
     description:
       "Streamline processes and reduce manual tasks with intelligent workflow automation solutions.",
     icon: <Workflow className="h-12 w-12" />,
-    link: "/solutions#automation",
+    link: "/our-solutions#work",
   },
   {
     title: "RPA Desktop Flows",
     description:
       "Automate repetitive tasks for improved efficiency and accuracy, freeing up valuable resources.",
-    icon: <MonitorCheck className="h-12 w-12" />,
-    link: "/solutions#automation",
+      link: "/our-solutions#rpa",
   },
 ];
 

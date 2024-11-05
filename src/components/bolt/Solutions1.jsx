@@ -1,4 +1,5 @@
-import { AirVent, Bot, BotIcon, Brain, Code, Cog, Database, FileText, Server, Shield,DollarSign,Box,Cloud  ,Repeat,Folder , Home , Zap,RefreshCw , Monitor   } from 'lucide-react';
+"use client"
+import { AirVent, Bot, BotIcon, Brain, Code, Cog, Database, FileText, Server, Shield,DollarSign,Box,Cloud  ,Repeat,Folder , Home , Zap,RefreshCw , Monitor,BiChart , AiOutline ,BiLineChart , DatabaseIcon , IntegrationIcon,PredictiveAnalyticsIcon,UserAnalyticsIcon,GovernanceIcon, SquareCheckBig, ChartNoAxesCombined, Biohazard, BrainCircuit, Blocks, TrendingUpDown, Target } from 'lucide-react';
 import Link from 'next/link';
 import SolutionSection from './Solutions/SolutionSection';
 
@@ -80,6 +81,131 @@ const aiSolutions = [
     ]
   }
 ];
+const data= [
+      {
+        title: "Business Intelligence Solutions",
+        description: "Empower decision-making with structured data insights using tools like Power BI, Tableau, and Looker.",
+        icon: <Biohazard  className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Real-time Business Insights",
+            description: "Deliver real-time business insights."
+          },
+          {
+            title: "Growth Opportunities",
+            description: "Identify growth opportunities."
+          }
+        ]
+      },
+      {
+        title: "Advanced Analytics with AI",
+        description: "Harness AI-driven analytics to uncover deep insights from complex datasets, predicting trends and optimizing operations.",
+        icon: <BrainCircuit className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Predict Future Outcomes",
+            description: "Predict future outcomes."
+          },
+          {
+            title: "Strategic Planning",
+            description: "Enhance strategic planning with AI-powered analytics."
+          }
+        ]
+      },
+      {
+        title: "Power BI for Data Visualization",
+        description: "Create dynamic, visually compelling dashboards and reports in Power BI for actionable insights.",
+        icon: <Target  className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Data Interpretation",
+            description: "Easily interpret data."
+          },
+          {
+            title: "Data-Driven Culture",
+            description: "Facilitate a data-driven culture across your organization with customizable visuals."
+          }
+        ]
+      },
+      {
+        title: "Data Warehousing Solutions",
+        description: "Build and manage data warehouses on platforms like Azure Synapse, AWS Redshift, and Google BigQuery to centralize data storage.",
+        icon: <Database className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Data Integration",
+            description: "Enable seamless data integration."
+          },
+          {
+            title: "High Data Quality",
+            description: "Ensure high data quality."
+          }
+        ]
+      },
+      {
+        title: "Data Integration and ETL Services",
+        description: "Streamline data integration from multiple sources using ETL (Extract, Transform, Load) solutions.",
+        icon: <Blocks  className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Efficient Data Consolidation",
+            description: "Consolidate data efficiently."
+          },
+          {
+            title: "Data Preparation",
+            description: "Prepare data for analysis, enabling faster, more reliable insights."
+          }
+        ]
+      },
+      {
+        title: "Predictive Analytics",
+        description: "Use predictive models to forecast trends, customer behaviors, and business outcomes.",
+        icon: <TrendingUpDown  className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Competitive Edge",
+            description: "Gain a competitive edge by anticipating needs."
+          },
+          {
+            title: "Risk Reduction",
+            description: "Reduce risk."
+          }
+        ]
+      },
+      {
+        title: "Self-Service Analytics",
+        description: "Empower teams with self-service analytics tools, allowing non-technical users to access, visualize, and analyze data independently.",
+        icon: <ChartNoAxesCombined  className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Data-Driven Culture Enhancement",
+            description: "Foster a data-driven culture."
+          },
+          {
+            title: "Operational Efficiency",
+            description: "Increase operational efficiency."
+          }
+        ]
+      },
+      {
+        title: "Data Governance and Compliance",
+        description: "Implement robust data governance frameworks to ensure data accuracy, security, and regulatory compliance.",
+        icon: <SquareCheckBig  className='h-8 w-8 text-indigo-600' />,
+        benefits: [
+          {
+            title: "Sensitive Data Protection",
+            description: "Protect sensitive data."
+          },
+          {
+            title: "Trustworthy Data",
+            description: "Ensure consistent, trustworthy data across the organization."
+          }
+        ]
+      }
+    ]
+
+
+
 const cloudSolutions = [
       {
         title: "Cloud Cost Optimization",
@@ -309,11 +435,19 @@ export default function Solutions1() {
         </div>
       </section>
       <div className="relative bg-bottom bg-fixed bg-contain"  style={{ backgroundImage: "url('/AiSolutionImg.png')" }}>
+      
             <SolutionSection
         id="ai"
         title="AI-Driven Innovations"
         description="Harness the power of artificial intelligence to transform your business operations and drive innovation."
         solutions={aiSolutions}
+      />
+
+            <SolutionSection
+        id="data"
+        title="Data and Analytics"
+        description="Unlock the potential of your data with intelligent analytics. Our solutions empower data-driven decision-making, advanced business intelligence, and clear visualizations that drive strategic growth."
+        solutions={data}
       />
 
       <SolutionSection

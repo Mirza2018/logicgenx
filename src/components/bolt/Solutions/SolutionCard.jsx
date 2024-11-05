@@ -28,7 +28,7 @@ export default function SolutionCard({ title, description, icon: Icon, benefits,
 
         <div className='flex justify-between'>
 
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-600 w-[580px]">{description}</p>
 { isOpen ?
         <p onClick={()=>{setIsOpen(!isOpen)}} className='text-blue-600 cursor-pointer hover:text-blue-900'>see less...</p>
         :
