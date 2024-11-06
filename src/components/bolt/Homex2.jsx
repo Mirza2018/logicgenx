@@ -137,7 +137,7 @@ const Homex2 = () => {
                   <Link href={solution?.link}>
 
                   
-                  <div className="bg-white rounded-lg shadow-lg h-72 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <div className="bg-white rounded-lg shadow-lg xl:h-72 md:h-80 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
                   <div className="text-indigo-600 mb-4 ">
                     {/* <solution.icon className="h-12 w-12" /> */}
                     {solution?.icon}

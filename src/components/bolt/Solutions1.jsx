@@ -421,7 +421,7 @@ export default function Solutions1() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl text-gray-200 max-w-5xl mx-auto h-14 my-5 text-pretty"
+            className="text-2xl text-gray-200 max-w-5xl mx-auto h-14 md:my-5 my-0 mt-5 md:mt-0 text-pretty"
           >
             Intelligent, Scalable, and Future-Ready Solutions for Your Business Needs
           </motion.p>
@@ -429,7 +429,7 @@ export default function Solutions1() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg text-gray-200 max-w-3xl mx-auto text-justify"
+            className="text-lg text-gray-200 max-w-3xl mx-auto text-justify md:mt-0 mt-16"
           >
             Explore our comprehensive range of AI, Cloud, and Data Analytics solutions tailored to empower your business with the latest technology.
           </motion.p>
