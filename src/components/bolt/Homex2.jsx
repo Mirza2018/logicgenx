@@ -119,7 +119,6 @@ const Homex2 = () => {
                   key={index}
                   className="py-16"
                 >
-    link: "/our-solutions#excellence",
                   <Link href={solution?.link}>
 
                   
