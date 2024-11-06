@@ -1,6 +1,7 @@
 "use client"
 import { AirVent, Bot, BotIcon, Brain, Code, Cog, Database, FileText, Server, Shield,DollarSign,Box,Cloud  ,Repeat,Folder , Home , Zap,RefreshCw , Monitor,BiChart , AiOutline ,BiLineChart , DatabaseIcon , IntegrationIcon,PredictiveAnalyticsIcon,UserAnalyticsIcon,GovernanceIcon, SquareCheckBig, ChartNoAxesCombined, Biohazard, BrainCircuit, Blocks, TrendingUpDown, Target } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion'
 import SolutionSection from './Solutions/SolutionSection';
 
 
@@ -408,30 +409,30 @@ export default function Solutions1() {
       {/* <Image src={bg} alt="ai" className='absolute top-0 left-0 w-full h-full object-cover aspect-square opacity-50 z-10 '/> */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-bold "
           >
             Our Solutions
-          </h1>
-          <p
+          </motion.h1>
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl text-gray-200 max-w-5xl mx-auto h-14"
+            className="text-2xl text-gray-200 max-w-5xl mx-auto h-14 my-5 text-pretty"
           >
             Intelligent, Scalable, and Future-Ready Solutions for Your Business Needs
-          </p>
-          <p
+          </motion.p>
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-gray-200 max-w-3xl mx-auto "
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg text-gray-200 max-w-3xl mx-auto text-justify"
           >
             Explore our comprehensive range of AI, Cloud, and Data Analytics solutions tailored to empower your business with the latest technology.
-          </p>
+          </motion.p>
         </div>
       </section>
       <div className="relative bg-bottom bg-fixed bg-contain"  style={{ backgroundImage: "url('/AiSolutionImg.png')" }}>

@@ -15,6 +15,7 @@ import {
   Zap,
 } from "lucide-react";
 import Image from "next/image";
+import { motion } from 'framer-motion'   
 import bg from "/public/homebanner.png";
 import { GoArrowRight } from "react-icons/go";
 import { GoArrowLeft } from "react-icons/go";
@@ -28,6 +29,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // Import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { RxDesktop } from "react-icons/rx";
 
 const Homex2 = () => {
   return (
@@ -43,14 +45,28 @@ const Homex2 = () => {
         <div className="absolute inset-0 bg-black opacity-[100%]"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white">
+          <motion.h1 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+          className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white">
             Unlock Business Potential with Intelligent Tech Solutions
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-xl md:text-2xl mb-8 text-white">
             Empowering your digital transformation with AI, Cloud, and Data
             Analytics
-          </p>
-          <div>
+          </motion.p>
+          <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+          
+          
+          >
             <Link
               href="/our-solutions"
               className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-lg"
@@ -58,7 +74,7 @@ const Homex2 = () => {
               Discover Our Solutions
               <ChevronRight className="ml-2 h-5 w-5" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -143,16 +159,18 @@ const Homex2 = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
-    
-          <div className="select-none custom-prev absolute top-[60%] left-4 z-10
-           cursor-pointer text-white text-2xl bg-blue-400 rounded py-1 px-2 -ml-3 md:ml-0">
+
+            
+          <div className="select-none custom-prev absolute top-1/2 left-1 md:-left-4  z-10
+           cursor-pointer text-white text-2xl bg-blue-400 rounded  py-1 px-2 -ml-3 md:ml-0">
             <GoArrowLeft />
           </div>
-          <div className="select-none custom-next absolute top-[60%] right-4 z-10
+          <div className="select-none custom-next absolute top-1/2 right-0 md:-right-3 z-10
            cursor-pointer text-white text-2xl bg-blue-400 rounded py-1 px-2 -mr-3 md:mr-0">
             <GoArrowRight />
+          </div>          
           </div>
+    
         </div>
       </section>
 
@@ -324,6 +342,7 @@ const solutions = [
     title: "RPA Desktop Flows",
     description:
       "Automate repetitive tasks for improved efficiency and accuracy, freeing up valuable resources.",
+      icon: <RxDesktop className="h-12 w-12" />,
       link: "/our-solutions#rpa",
   },
 ];

@@ -1,6 +1,7 @@
-
+'use client'
 import { ChevronRight, Shield, Target, Users, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion'      
 
 
 const values = [
@@ -42,22 +43,22 @@ export default function Mission() {
       <section className="relative py-20 bg-center bg-cover text-white bg-[#0F1C45]" >
      
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6"
           >
             Our Mission in AI and Technology
-          </h1>
-          <p
+          </motion.h1>
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-200 max-w-3xl mx-auto"
           >
             Learn more about our goals, our approach to AI technologies, and our commitment to driving innovation
-          </p>
+          </motion.p>
         </div>
       </section>
 <div className='relative bg-contain bg-fixed '    style={{ backgroundImage: "url('/missionBanner3.png')" }}>
@@ -145,8 +146,17 @@ export default function Mission() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-xl text-white">The principles that guide everything we do</p>
+            <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+            
+            className="text-3xl font-bold text-white mb-4">Our Core Values</motion.h2>
+            <motion.p 
+                       initial={{ opacity: 0, y: 20 }}
+                       animate={{ opacity: 1, y: 0 }}
+                       transition={{ duration: 0.8, delay: 0.2 }} 
+            className="text-xl text-white">The principles that guide everything we do</motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
