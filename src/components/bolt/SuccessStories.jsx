@@ -12,6 +12,7 @@ const successStories = [
     title: 'AI-Powered Analytics Transformation',
     company: 'TechCorp Global',
     industry: 'Technology',
+    img:"/aiSuccess3.png",
     challenge: 'TechCorp struggled with processing vast amounts of customer data efficiently, leading to delayed insights and missed opportunities.',
     solution: 'Implemented our AI-driven analytics solution with real-time processing capabilities and predictive modeling.',
     results: [
@@ -30,6 +31,7 @@ const successStories = [
     title: 'Healthcare Cloud Migration Success',
     company: 'HealthFirst',
     industry: 'Healthcare',
+    img:"/aiSuccess2.png",
     challenge: 'Managing sensitive patient data across multiple legacy systems while ensuring compliance and accessibility.',
     solution: 'Executed a comprehensive cloud migration strategy with enhanced security measures and automated workflows.',
     results: [
@@ -48,6 +50,7 @@ const successStories = [
     title: 'Financial Analytics Revolution',
     company: 'FinanceHub',
     industry: 'Finance',
+    img:"/aiSuccess4.png",
     challenge: 'Needed advanced analytics capabilities to process market data and generate actionable trading insights quickly.',
     solution: 'Deployed our custom financial analytics platform with AI-powered predictive modeling and real-time market analysis.',
     results: [
@@ -104,20 +107,21 @@ export default function SuccessStories() {
       <main className="container mx-auto px-4 py-12 ">
         <section id="stories" className="mb-16">
           {/* <h2 className="text-2xl font-semibold text-white mb-8">Featured Success Stories</h2> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {successStories.map((story, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105"
+                className="bg-gray-800 w- rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105"
                 whileHover={{ y: -5 }}
                 onClick={() => setSelectedStory(story)}
               >
-                <div className="relative h-48">
+                <div className="relative">
                   <Image
-                    src={`/aisuccess.png`}
+                    src={story.img}
                     alt={story.title}
-                    layout="fill"
-                    objectFit="cover"
+                    width={500}
+                    height={500}
+                    className='object-cover aspect-square object-top '
                   />
                 </div>
                 <div className="p-6">
@@ -172,15 +176,6 @@ export default function SuccessStories() {
         </Link>
 
       </section>
-
-
-
-
-
-
-
-
-
 
       {selectedStory && (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
