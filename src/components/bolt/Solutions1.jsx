@@ -399,6 +399,13 @@ const excellence=[
       }
     
   ]
+  export const metadata = {
+    title: "LogicGenX | Our Solutions",
+    description: "LogicGenX | Our Solutions",
+    icons: {
+      icon: "/logo.png"
+    },
+  };
 
 export default function Solutions1() {
   return (
