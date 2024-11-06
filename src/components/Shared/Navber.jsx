@@ -123,7 +123,7 @@ const Navbar = () => {
               src="/logo.png"
               height={1000}
               width={1000}
-              alt="next-level-services"
+              alt="logicGenX"
             />
           </Link>
         </div>

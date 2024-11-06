@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-
 import { Brain, Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footerx() {
   return (
@@ -11,7 +11,16 @@ export default function Footerx() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center">
-              <Brain className="h-8 w-8 text-indigo-400" />
+            {/* <Link href="/">
+            <Image
+              priority
+              src="/logo.png"
+              height={1000}
+              width={1000}
+              alt="logicGenX"
+              className='w-32'
+            />
+          </Link> */}
               <span className="ml-2 text-xl font-bold">LogicGenX</span>
             </div>
             <p className="text-gray-400">

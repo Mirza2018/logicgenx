@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { motion } from 'framer-motion';
 import {
   Award,
   BetweenHorizontalStart,
@@ -8,32 +8,31 @@ import {
   ChevronRight,
   Cloud,
   Database,
-  MonitorCheck,
   Target,
   Users,
   Workflow,
-  Zap,
+  Zap
 } from "lucide-react";
 import Image from "next/image";
-import { motion } from 'framer-motion'   
+import Link from "next/link";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import bg from "/public/homebanner.png";
-import { GoArrowRight } from "react-icons/go";
-import { GoArrowLeft } from "react-icons/go";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 // Import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { RxDesktop } from "react-icons/rx";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const Homex2 = () => {
   return (
     <div className="w-full bg-gray-500 ">
+   
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center  text-white ">
         <Image
