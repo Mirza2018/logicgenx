@@ -200,7 +200,7 @@ export default function Mission() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
               >
-                <p className="text-gray-900 font-medium">{industry}</p>
+                <p className="text-gray-900 font-medium text-sm md:text-base">{industry}</p>
               </div>
             ))}
           </div>
