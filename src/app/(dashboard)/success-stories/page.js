@@ -1,6 +1,5 @@
-import AiSuccessStories from '@/components/bdcaling/AiSuccessStories';
-import SuccessStories from '@/components/bolt/SuccessStories';
-import React from 'react';
+import SuccessStories from "@/components/SuccessStory/SuccessStoryes";
+
 
 const page = () => {
     return (

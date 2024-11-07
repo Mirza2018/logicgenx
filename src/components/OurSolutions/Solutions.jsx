@@ -2,7 +2,7 @@
 import { AirVent, Bot, BotIcon, Brain, Code, Cog, Database, FileText, Server, Shield,DollarSign,Box,Cloud  ,Repeat,Folder , Home , Zap,RefreshCw , Monitor,BiChart , AiOutline ,BiLineChart , DatabaseIcon , IntegrationIcon,PredictiveAnalyticsIcon,UserAnalyticsIcon,GovernanceIcon, SquareCheckBig, ChartNoAxesCombined, Biohazard, BrainCircuit, Blocks, TrendingUpDown, Target } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion'
-import SolutionSection from './Solutions/SolutionSection';
+import SolutionSection from './SolutionsCard/SolutionSection';
 
 
 const aiSolutions = [
@@ -407,7 +407,7 @@ const excellence=[
     },
   };
 
-export default function Solutions1() {
+export default function Solutions() {
   return (
     <div className="w-full bg-gray-500">
       {/* Hero Section */}

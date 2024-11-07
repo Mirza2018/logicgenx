@@ -1,13 +1,12 @@
-import Solutions from '@/components/bdcaling/Solutions';
-import Solutions1 from '@/components/bolt/Solutions1';
-import React from 'react';
+import Solutions from "@/components/OurSolutions/Solutions";
+
 
 
 const page = () => {
     return (
         <div>
-            {/* <Solutions/> */}
-            <Solutions1/>
+
+            <Solutions/>
         </div>
     );
 };

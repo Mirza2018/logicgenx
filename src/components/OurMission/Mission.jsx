@@ -216,13 +216,7 @@ export default function Mission() {
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
             Partner with us to bring innovative, ethical AI solutions to your organization
           </p>
-          {/* <Link
-            href="/contact-with-us"
-            className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-indigo-900 transition-colors"
-          >
-            Get Started
-            <ChevronRight className="ml-2 h-5 w-5" />
-          </Link> */}
+
 
           <Link href="/connect-with-us" >
           <div className="grid gap-8 items-start justify-center mt-6">

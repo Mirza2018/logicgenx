@@ -1,11 +1,12 @@
 "use client"
-import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
-import { FaBrain, FaRocket, FaChartLine, FaHandshake, FaArrowRight } from 'react-icons/fa'
 import Image from 'next/image'
-import emailjs from '@emailjs/browser';
+import { useState } from 'react'
+import { FaBrain, FaChartLine, FaHandshake, FaRocket } from 'react-icons/fa'
 import Swal from 'sweetalert2'
-import GoogleMap from './GoogleMap'
+import GoogleMap from '../GoogleMap'
+
 
 export default function ContractWithUs() {
   const [activeStep, setActiveStep] = useState(0)

@@ -35,11 +35,6 @@ const GoogleMap = () => {
                                     <h3 className="text-lg font-medium text-white">Our Address</h3>
                                     <p className="mt-1 text-white">500 N Central Expy Ste 500 #290, Plano, TX 75074, United States</p>
                                 </div>
-                                {/* <div className="border-t border-gray-200 px-6 py-4">
-                                    <h3 className="text-lg font-medium text-white">Hours</h3>
-                                    <p className="mt-1 text-white">Saturday - Thursday: 10am - 6pm</p>
-                                    <p className="mt-1 text-white">Friday: Closed</p>
-                                </div> */}
                                 <div className="border-t border-gray-200 px-6 py-4">
                                     <h3 className="text-lg font-medium text-white">Contact</h3>
                                     <p className="mt-1 text-white">Email: info@logicgenx.com</p>

@@ -29,7 +29,7 @@ import "swiper/css/pagination";
 import { RxDesktop } from "react-icons/rx";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-const Homex2 = () => {
+const HomePage = () => {
   return (
     <div className="w-full bg-gray-500 ">
    
@@ -292,7 +292,7 @@ const Homex2 = () => {
   );
 };
 
-export default Homex2;
+export default HomePage;
 
 const solutions = [
   {

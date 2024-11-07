@@ -1,4 +1,5 @@
-import ContractWithUs from '@/components/bdcaling/ContractWithUs';
+
+import ContractWithUs from '@/components/ContractWithUs/ContractWithUs';
 import React from 'react';
 
 const page = () => {

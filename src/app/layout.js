@@ -1,7 +1,8 @@
-import Footerx from "@/components/bolt/Layout/Footerx";
+
 import Navber from "@/components/Shared/Navber";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Shared/Footer";
 
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
         
         {children}
         
-        <Footerx/>
+        <Footer/>
         
         </body>
     </html>
