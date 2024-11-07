@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GoogleMap = () => {
-    const iframeSrc = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=LogicGenX&zoom=10&maptype=satellite";
+    const iframeSrc = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=LogicGenX&zoom=10";
 
     return (
         <section className="bg-[#0f1c45] container mx-auto">

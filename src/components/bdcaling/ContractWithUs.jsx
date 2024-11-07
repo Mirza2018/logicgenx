@@ -149,19 +149,19 @@ export default function ContractWithUs() {
           <form className="space-y-4" onSubmit={onFormSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-white">Name</label>
-              <input type="text" id="name" name="name" placeholder='Input your Name' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <input type="text" id="name" name="name" placeholder='Input your Name' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500   outline-none" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-white">Email</label>
-              <input type="email" id="email" name="email" placeholder='Input your Mail' className=" px-2 mt-1 block w-full rounded-md bg-white py-2 border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <input type="email" id="email" name="email" placeholder='Input your Mail' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500   outline-none" />
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-white">Company</label>
-              <input type="text" id="company" placeholder='Input your company Name'  name="company" className="px-2 mt-1 block w-full rounded-md bg-white py-2 border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+              <input type="text" id="company" placeholder='Input your company Name'  name="company" className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500   outline-none" />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-blue-200">Message</label>
-              <textarea id="message" placeholder='Input Message'  name="message" rows={4} className="px-2 mt-1 block w-full rounded-md bg-white border-blue-700 text-black  focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"></textarea>
+              <label htmlFor="message" className="block text-sm font-medium ">Message</label>
+              <textarea id="message" placeholder='Input Message'  name="message" rows={4} className="px-2 mt-1 block w-full rounded-md bg-white border-blue-700 text-black outline-none  "></textarea>
             </div>
             <motion.button 
               type="submit" 
