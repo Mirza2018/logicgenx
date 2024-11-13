@@ -83,7 +83,7 @@ export default function ContractWithUs() {
 
     const template={
       to_name:"CEO  ",
-      from_name:"Mirza",
+      from_name:"LogicGenX",
       message:   `Name: ${name},
                   Email: ${email},
                   Company: ${company}, 
