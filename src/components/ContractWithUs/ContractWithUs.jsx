@@ -150,15 +150,15 @@ export default function ContractWithUs() {
           <form className="space-y-4" onSubmit={onFormSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-white">Name</label>
-              <input type="text" id="name" name="name" placeholder='Input your Name' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500   outline-none" />
+              <input type="text" id="name" name="name" placeholder='Input your Name' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500 bg-white  outline-none" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-white">Email</label>
-              <input type="email" id="email" name="email" placeholder='Input your Mail' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500   outline-none" />
+              <input type="email" id="email" name="email" placeholder='Input your Mail' className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500  bg-white outline-none" />
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-white">Company</label>
-              <input type="text" id="company" placeholder='Input your company Name'  name="company" className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500   outline-none" />
+              <input type="text" id="company" placeholder='Input your company Name'  name="company" className="px-2 mt-1 block w-full rounded-md py-2 border-blue-700 text-black  focus:border-blue-500  bg-white outline-none" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium ">Message</label>
